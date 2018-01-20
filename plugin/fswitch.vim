@@ -326,7 +326,9 @@ function! FSwitch(filename, precmd)
             echoerr "Alternate has evaluated to nothing.  See :h fswitch-empty for more info."
         endif
     else
-        echoerr "No alternate file found.  'fsnonewfiles' is set which denies creation."
+        " dont make it an error
+        " echoerr "No alternate file found.  'fsnonewfiles' is set which denies creation."
+        echo "No alternate file found.  'fsnonewfiles' is set which denies creation."
     endif
 endfunction
 
